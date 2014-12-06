@@ -1,6 +1,6 @@
 sis-pst
 =======
-SIS2013/2014@FOI
+SIS2014/2015@FOI
 
 ZADATAK:
 Napraviti software koji cita mail-ove (iz pst file-a), vadi potadke iz njih (from, to, cc, bcc, subject i content mail-a). Po podacima je moguce raditi pretragu punog teksta.
