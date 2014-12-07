@@ -1,0 +1,9 @@
+1.SETUP&START
+	http://joelabrahamsson.com/elasticsearch-101/
+	1. setup JAVA_HOME environment variable
+		HINT: https://stackoverflow.com/questions/2619584/how-to-set-java-home-on-windows-7
+	2. bin/elasticsearch - start elasticsearch on localhost:9200
+
+2.MARVEL
+	1. install:	bin/elasticsearch/plugin -i elasticsearch/marvel/latest
+	2. start SENSE:  http://localhost:9200/_plugin/marvel/sense/
