@@ -36,15 +36,17 @@ public class main{
         }
         CreateNode createNode = CreateNode.getInstance();
         //System.out.println("CLIENT DATA MOTHERFUCKER!!!!!: "+createNode.node.client().toString());
-        /*for(Object i : fileEmail.GetJsonArray()){
-            JSONObject jsonObject = (JSONObject) i;
-            System.out.println(jsonObject.get("senderEmail"));
-        }
-        System.out.println("VELICINA POLJA: "+fileEmail.GetEmailJsonArray().size());*/
+        JSONArray emailArray=fileEmail.GetEmailJsonArray();
         
-        /*for(String i : fileEmail.GetFolderList()){
+        for(int i=0; i<emailArray.length(); i++){
+            System.out.println("JSON OBJEKT: "+emailArray.getJSONObject(i).toString());
+            
+        }
+        //System.out.println("VELICINA POLJA: "+emailArray.length());
+        
+        for(String i : fileEmail.GetFolderList()){
             System.out.println(i);
-        }*/
+        }
         
         MainForm form = new MainForm();
         form.setVisible(true);

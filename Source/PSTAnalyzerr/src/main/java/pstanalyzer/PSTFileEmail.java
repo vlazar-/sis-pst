@@ -109,7 +109,7 @@ public class PSTFileEmail {
                 }
                 //THEESE ARE NOT ALL ATTRIBUTES 
                 
-                //jsonArray.add(jsonEmailObject);
+                jsonArray.put(jsonEmailObject);
                 //System.out.println(jsonEmailObject.toJSONString());
                 email=(PSTMessage) folder.getNextChild(); //get's next email in folder
             }
