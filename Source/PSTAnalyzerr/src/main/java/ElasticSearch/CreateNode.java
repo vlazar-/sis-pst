@@ -5,9 +5,9 @@
  */
 package ElasticSearch;
 
+import org.elasticsearch.action.admin.cluster.health.ClusterHealthStatus;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.node.Node;
-import org.elasticsearch.node.NodeBuilder.*;
 import static org.elasticsearch.node.NodeBuilder.nodeBuilder;
 
 /**
@@ -43,8 +43,6 @@ public class CreateNode {
     public static void nodeShutdown(){
         node.close();
     }
+    }
     
-    
-    
-    
-}
+

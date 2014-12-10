@@ -7,6 +7,7 @@ package hr.foi.pstanalyzerr;
 
 import com.pff.PSTFile;
 import ElasticSearch.CreateNode;
+import ElasticSearch.DbConnect;
 import gui.MainForm;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -50,6 +51,9 @@ public class main{
         
         MainForm form = new MainForm();
         form.setVisible(true);
+        
+        DbConnect db=new DbConnect();
+        db.createIndex();
     }
     
 }
