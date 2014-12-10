@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="java-libpst">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/libs/java-libpst.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
