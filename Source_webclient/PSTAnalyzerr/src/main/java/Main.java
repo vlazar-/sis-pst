@@ -1,13 +1,14 @@
 import Client.Server;
 import ElasticSearch.CreateNode;
+import ElasticSearch.DbConnect;
 import PST.PSTFileEmail;
 import com.pff.PSTFile;
+import org.json.JSONArray;
 
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-
 
 
 /**
@@ -18,11 +19,10 @@ public class Main extends JFrame {
     protected JButton btnStart, btnStop;
     protected JLabel labStart;
     private static final int DEFAULT_SIZE = 3;
-    protected Dimension dimension = new Dimension(600,400);
+    protected Dimension dimension = new Dimension(600, 400);
 
 
-    public Main()
-    {
+    public Main() {
 
         JPanel pane = (JPanel) getContentPane();
         pane.setPreferredSize(dimension);
@@ -44,7 +44,6 @@ public class Main extends JFrame {
         });
 
 
-
         //gl.setAutoCreateContainerGaps(true);
         gl.setHorizontalGroup(gl.createSequentialGroup()
                         .addComponent(btnStart)
@@ -62,40 +61,45 @@ public class Main extends JFrame {
         pack();
 
 
-
         //center of screen
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    public static void initElasticSearch()
-    {
-        String fileName="D:"+"\\"+"FAKS"+"\\"+"4_CETVRTA_GODINA"+"\\"+"Sigurnost_informacijskih_sustava"+"\\"+"PST_dat"+"\\"+"goran_fazer@hotmail.com.pst";
+    public static void initElasticSearch() {
+        // TODO code application logic here
+
+        String fileName = "D:" + "\\" + "FAKS" + "\\" + "4_CETVRTA_GODINA" + "\\" + "Sigurnost_informacijskih_sustava" + "\\" + "PST_dat" + "\\" + "goran_fazer@hotmail.com.pst";
         System.out.println(fileName);
-        PSTFileEmail fileEmail=new PSTFileEmail();
-        try{
-            PSTFile pstFile=new PSTFile(fileName);
+        PSTFileEmail fileEmail = new PSTFileEmail();
+        try {
+            PSTFile pstFile = new PSTFile(fileName);
             fileEmail.proccessFolder(pstFile.getRootFolder());
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.toString());
         }
+        CreateNode createNode = CreateNode.getInstance();
+        //System.out.println("CLIENT DATA MOTHERFUCKER!!!!!: "+createNode.node.client().toString());
+        JSONArray emailArray = fileEmail.GetEmailJsonArray();
 
-        CreateNode cn = CreateNode.getInstance();
-        System.out.println("ELASTICSEARCH CLIENT STARTED: "+ cn.node.client().toString());
-        /*JSONArray emailArray = fileEmail.GetEmailJsonArray();
-
-        for(int i=0; i<emailArray.length(); i++){
-            System.out.println("JSON OBJEKT: "+emailArray.getJSONObject(i).toString());
+        for (int i = 0; i < emailArray.length(); i++) {
+            System.out.println("JSON OBJEKT: " + emailArray.getJSONObject(i).toString());
 
         }
         //System.out.println("VELICINA POLJA: "+emailArray.length());
 
-        for(String i : fileEmail.GetFolderList()){
+       /* for(String i : fileEmail.GetFolderList()){
             System.out.println(i);
-        }
+        }*/
 
-        DbConnect db=new DbConnect();
-        db.createIndex();*/
+        DbConnect db = new DbConnect();
+
+        //db.DeleteIndex("pstindex");
+
+        if (db.CreateIndex("pstindex") == true) {
+            System.out.println("NAPRAVLJEN JE INDEKS");
+            db.FillIndex(emailArray);
+        }
     }
 
 
@@ -111,7 +115,7 @@ public class Main extends JFrame {
         //creating and showing this application's GUI.
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-               initGUI();
+                initGUI();
             }
         });
     }
