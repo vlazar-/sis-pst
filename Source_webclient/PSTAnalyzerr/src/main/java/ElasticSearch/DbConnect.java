@@ -4,22 +4,16 @@
  * and open the template in the editor.
  */
 package ElasticSearch;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import static jdk.nashorn.internal.codegen.Compiler.LOG;
-
-import PST.PSTFileEmail;
 import org.elasticsearch.action.admin.indices.create.CreateIndexRequestBuilder;
 import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
-import org.elasticsearch.common.xcontent.XContentBuilder;
-import org.elasticsearch.common.xcontent.XContentFactory;
+import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsResponse;
 import org.elasticsearch.indices.IndexAlreadyExistsException;
-import org.json.JSONArray;
+import java.util.HashMap;
+
+
+import static jdk.nashorn.internal.codegen.Compiler.LOG;
 
 /**
  *
@@ -30,28 +24,21 @@ public class DbConnect {
     CreateIndexRequestBuilder cirb;
     HashMap<String, Object> settings;
     CreateIndexResponse createIndexResponse = null;
-    PSTFileEmail emailJson;
 
     public boolean CreateIndex(String indexName) {
-
         cirb = CreateNode.client.admin().indices().prepareCreate(indexName);//kreira index u kojem ce biti pohranjeni podaci, nešto poput baze podataka
         settings = new HashMap<>();
-
         //svi podaci ce se spremiti u samo jednom shard-u, u dokumentaciji od elasticsearcha je objasnjen shard;
         settings.put("number_of_shards", 1);
-
         //broj indexa koji odgovaraju upitu u clusteru
         settings.put("number_of_replicas", 1);
-
         cirb.setSettings(settings);
-
         try {
             createIndexResponse = cirb.execute().actionGet();
         } catch (IndexAlreadyExistsException e) {
             //index pod tim imenom vec postoji
             e.printStackTrace();
         }
-
         if (createIndexResponse != null && createIndexResponse.isAcknowledged()) {
             //index je uspjesno kreiran
             return true;
@@ -71,17 +58,11 @@ public class DbConnect {
         }
     }
 
-    public void FillIndex(JSONArray emailJSONArray) {
-        //Map<String, Object> jsonDocument=new HashMap<String, Object>();
-        try {
-            XContentBuilder builder = XContentFactory.jsonBuilder().startObject().value(emailJSONArray.getJSONObject(3)).endObject();//tu se nalazi jedan JSON objekt unutar JSONDokumenta
-            //PutMappingResponse response = CreateNode.client.admin().indices().preparePutMapping("pstindex").setType("neki_tip_indeksa").setSource(builder).execute().actionGet();
-            //jsonDocument.put(String.valueOf(i), builder);
-            /*if (response.isAcknowledged()) {
-                System.out.println("NAPRAVLJENO JE MAPIRANJE-PODACI MORAJU BITI UNUTRA");
-            }*/
-        } catch (IOException ex) {
-            Logger.getLogger(DbConnect.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public boolean CheckIfIndexExists(){
+        IndicesExistsResponse existsResponse = CreateNode.client.admin().indices().prepareExists("pstindex").execute().actionGet();
+        if(existsResponse.isExists())
+            return true;
+        else
+            return false;
     }
 }

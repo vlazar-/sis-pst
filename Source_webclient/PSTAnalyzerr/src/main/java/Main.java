@@ -3,12 +3,10 @@ import ElasticSearch.CreateNode;
 import ElasticSearch.DbConnect;
 import PST.PSTFileEmail;
 import com.pff.PSTFile;
-import org.json.JSONArray;
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+
 
 
 /**
@@ -57,10 +55,7 @@ public class Main extends JFrame {
                                 .addComponent(labStart))
         );
 
-
         pack();
-
-
         //center of screen
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -71,6 +66,19 @@ public class Main extends JFrame {
 
         String fileName = "D:" + "\\" + "FAKS" + "\\" + "4_CETVRTA_GODINA" + "\\" + "Sigurnost_informacijskih_sustava" + "\\" + "PST_dat" + "\\" + "goran_fazer@hotmail.com.pst";
         System.out.println(fileName);
+        CreateNode createNode = CreateNode.getInstance();
+        System.out.println("CLIENT DATA MOTHERFUCKER!!!!!: "+createNode.node.client().toString());
+        DbConnect db = new DbConnect();
+
+        if(db.CheckIfIndexExists()==true){
+            System.out.println("OBRISAN JE INDEKS");
+            db.DeleteIndex("pstindex");
+        }
+        if(db.CheckIfIndexExists()==false) {
+            if (db.CreateIndex("pstindex") == true) {
+                System.out.println("NAPRAVLJEN JE INDEKS");
+            }
+        }
         PSTFileEmail fileEmail = new PSTFileEmail();
         try {
             PSTFile pstFile = new PSTFile(fileName);
@@ -78,36 +86,12 @@ public class Main extends JFrame {
         } catch (Exception e) {
             System.out.println(e.toString());
         }
-        CreateNode createNode = CreateNode.getInstance();
-        //System.out.println("CLIENT DATA MOTHERFUCKER!!!!!: "+createNode.node.client().toString());
-        JSONArray emailArray = fileEmail.GetEmailJsonArray();
-
-        for (int i = 0; i < emailArray.length(); i++) {
-            System.out.println("JSON OBJEKT: " + emailArray.getJSONObject(i).toString());
-
-        }
-        //System.out.println("VELICINA POLJA: "+emailArray.length());
-
-       /* for(String i : fileEmail.GetFolderList()){
-            System.out.println(i);
-        }*/
-
-        DbConnect db = new DbConnect();
-
-        //db.DeleteIndex("pstindex");
-
-        if (db.CreateIndex("pstindex") == true) {
-            System.out.println("NAPRAVLJEN JE INDEKS");
-            db.FillIndex(emailArray);
-        }
     }
 
 
     private static void initGUI() {
-
         Main m = new Main();
         m.setVisible(true);
-
     }
 
     public static void main(String[] args) {
