@@ -79,6 +79,9 @@ public class Main extends JFrame {
                 System.out.println("NAPRAVLJEN JE INDEKS");
             }
         }
+
+        //db.CreateMapping();
+
         PSTFileEmail fileEmail = new PSTFileEmail();
         try {
             PSTFile pstFile = new PSTFile(fileName);

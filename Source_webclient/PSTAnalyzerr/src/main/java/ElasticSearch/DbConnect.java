@@ -9,7 +9,12 @@ import org.elasticsearch.action.admin.indices.create.CreateIndexResponse;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexResponse;
 import org.elasticsearch.action.admin.indices.exists.indices.IndicesExistsResponse;
+import org.elasticsearch.action.admin.indices.mapping.put.PutMappingResponse;
+import org.elasticsearch.common.xcontent.XContentBuilder;
+import org.elasticsearch.common.xcontent.XContentFactory;
 import org.elasticsearch.indices.IndexAlreadyExistsException;
+
+import java.io.IOException;
 import java.util.HashMap;
 
 
@@ -64,5 +69,36 @@ public class DbConnect {
             return true;
         else
             return false;
+    }
+
+    public void CreateMapping(){
+        try {
+            String mapiranje="{\n" +
+                    "  \"properties\": {\n" +
+                    "    \"content\": {\n" +
+                    "      \"dynamic\": false,\n" +
+                    "      \"properties\": {\n" +
+                    "        \"senderEmail\": {\n" +
+                    "          \"type\": \"string\"\n" +
+                    "        }        \n" +
+                    "      }\n" +
+                    "    }\n" +
+                    "  }\n" +
+                    "}";
+
+            PutMappingResponse response=CreateNode.client.admin().
+                    indices().
+                    preparePutMapping("pstindex").
+                    setType("email").
+                    setSource(mapiranje).
+                    execute().
+                    actionGet();
+            if(response.isAcknowledged())
+                System.out.println("MAPIRANJE JE NAPRAVLJENO");
+            else
+                System.out.println("MAPRIANJE NIJE NAPRAVLJENO");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

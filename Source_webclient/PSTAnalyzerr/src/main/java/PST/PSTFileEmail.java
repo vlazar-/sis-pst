@@ -44,17 +44,18 @@ public class PSTFileEmail {
                 index++;
 
                 //THESE ARE NOT ALL ATTRIBUTES
-                if (email.getBody() != null) {
+               if (email.getBody() != null) {
                     //jsonDocument.put("emailBody", email.getBody());
                 } else {
                     jsonDocument.put("emailBody", "null");
                 }
 
-                if (email.getBodyHTML() != null) {
-                    //jsonDocument.put("emailBodyHtml", email.getBodyHTML());
+                if (email.getActionDate() != null) {
+                    jsonDocument.put("repliedDate", email.getActionDate());
                 } else {
-                    jsonDocument.put("emailBodyHtml", "null");
+                    jsonDocument.put("repliedDate", "null");
                 }
+
 
                 if (email.getDisplayBCC() != null) {
                     jsonDocument.put("displayBcc", email.getDisplayBCC());
@@ -93,14 +94,104 @@ public class PSTFileEmail {
                 }
 
                 if (email.getSenderName() != null) {
-                    jsonDocument.put("senderEmail", email.getSenderName());
+                    jsonDocument.put("senderName", email.getSenderName());
                 } else {
-                    jsonDocument.put("senderEmail", "null");
+                    jsonDocument.put("senderName", "null");
                 }
-                //THESE ARE NOT ALL ATTRIBUTES
+
+                if (email.getConversationTopic() != null) {
+                    jsonDocument.put("subject", email.getConversationTopic());
+                } else {
+                    jsonDocument.put("subject", "null");
+                }
+
+                jsonDocument.put("deletedAfterSubmit", email.getDeleteAfterSubmit());
+
+                if (email.getDisplayTo() != null) {
+                    jsonDocument.put("getDisplayTo", email.getDisplayTo());
+                } else {
+                    jsonDocument.put("getDisplayTo", "null");
+                }
+
+                jsonDocument.put("importance", email.getImportance());
+
+                if (email.getInReplyToId() != null) {
+                    jsonDocument.put("getInReplyToId", email.getInReplyToId());
+                } else {
+                    jsonDocument.put("getInReplyToId", "null");
+                }
+
+                if (email.getInternetMessageId() != null) {
+                    jsonDocument.put("internetMessageId", email.getInternetMessageId());
+                } else {
+                    jsonDocument.put("internetMessageId", "null");
+                }
+
+                jsonDocument.put("getMessageCcMe", email.getMessageCcMe());
+
+                if (email.getMessageDeliveryTime() != null) {
+                    jsonDocument.put("messageDeliveryTime", email.getMessageDeliveryTime());
+                } else {
+                    jsonDocument.put("messageDeliveryTime", "null");
+                }
+
+                jsonDocument.put("getMessageSize", email.getMessageSize());
+
+                jsonDocument.put("getMessageToMe", email.getMessageToMe());
+
+                jsonDocument.put("getNumberOfAttachments", email.getNumberOfAttachments());
+
+                jsonDocument.put("getNumberOfRecipients", email.getNumberOfRecipients());
+
+                jsonDocument.put("getOriginalSensitivity",email.getOriginalSensitivity());
+
+                jsonDocument.put("getPriority", email.getPriority());
+
+                if (email.getReplyRecipientNames() != null) {
+                    jsonDocument.put("getReplyRecipientNames", email.getReplyRecipientNames());
+                } else {
+                    jsonDocument.put("getReplyRecipientNames", "null");
+                }
+
+                if (email.getSenderEmailAddress() != null) {
+                    jsonDocument.put("getSenderEmailAddress", email.getSenderEmailAddress());
+                } else {
+                    jsonDocument.put("getSenderEmailAddress", "null");
+                }
+
+                if (email.getTaskStartDate() != null) {
+                    jsonDocument.put("getTaskStartDate", email.getTaskStartDate());
+                } else {
+                    jsonDocument.put("getTaskDueDate", "null");
+                }
+
+
+                jsonDocument.put("hasForwarded", email.hasForwarded());
+
+                jsonDocument.put("hasReplied", email.hasReplied());
+
+                jsonDocument.put("isRead", email.isRead());
+
+                jsonDocument.put("isResent", email.isResent());
+
+                jsonDocument.put("isUnmodified", email.isUnmodified());
+
+                jsonDocument.put("isUnsent", email.isUnsent());
+
+                if (email.getBodyHTML() != null) {
+                    jsonDocument.put("emailBodyHtml", email.getBodyHTML());
+                } else {
+                    jsonDocument.put("emailBodyHtml", "null");
+                }
+                if (email.getTransportMessageHeaders() != null) {
+                    jsonDocument.put("getTransportMessageHeaders", email.getTransportMessageHeaders());
+                } else {
+                    jsonDocument.put("getTaskDueDate", "null");
+                }
 
                 System.out.println("BROJ INDEXA: "+String.valueOf(index));
                 CreateNode.client.prepareIndex("pstindex", "email", String.valueOf(index)).setSource(jsonDocument).execute().actionGet();
+
                 email = (PSTMessage) folder.getNextChild(); //get's next email in folder
             }
             depth--;
