@@ -4,6 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 import static spark.Spark.get;
 import static spark.SparkBase.staticFileLocation;
+
+import Client.Controller.FileController;
+import Client.Controller.MailController;
+import Client.Controller.PageController;
+import Client.Service.FileService;
+import Client.Service.MailService;
+import Client.Service.PageService;
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
 
@@ -19,13 +26,9 @@ public class Server {
         * */
         staticFileLocation("/public");
 
-        get("/test", (request, response) -> "1,2,3, testing!");
-
-        Map map = new HashMap();
-        map.put("name", "Sam");
-
-        get("/", (request, response)-> new ModelAndView(map, "pages/index.mustache"), new MustacheTemplateEngine());
-
+        new PageController(new PageService());
+        new FileController(new FileService());
+        new MailController(new MailService());
     }
 }
 

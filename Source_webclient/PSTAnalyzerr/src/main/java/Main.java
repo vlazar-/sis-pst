@@ -64,7 +64,7 @@ public class Main extends JFrame {
     public static void initElasticSearch() {
         // TODO code application logic here
 
-        String fileName = "D:" + "\\" + "FAKS" + "\\" + "4_CETVRTA_GODINA" + "\\" + "Sigurnost_informacijskih_sustava" + "\\" + "PST_dat" + "\\" + "goran_fazer@hotmail.com.pst";
+        String fileName = "D:" + "\\" + "goran_fazer@hotmail.com.pst";
         System.out.println(fileName);
         CreateNode createNode = CreateNode.getInstance();
         System.out.println("CLIENT DATA MOTHERFUCKER!!!!!: "+createNode.node.client().toString());
