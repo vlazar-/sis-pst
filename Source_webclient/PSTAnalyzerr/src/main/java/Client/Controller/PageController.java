@@ -17,6 +17,8 @@ public class PageController {
 
         get("/", (request, response)-> new ModelAndView(null, "pages/index.mustache"), new MustacheTemplateEngine());
 
+        get("/search", (request, response)-> new ModelAndView(null, "pages/search.mustache"), new MustacheTemplateEngine());
+
         get("/help", (request, response)-> new ModelAndView(pageService.help(), "pages/help.mustache"), new MustacheTemplateEngine());
     }
 }

@@ -1,6 +1,7 @@
 {{> header}}
 
 <script>
+
     function updateSize() {
         var nBytes = 0,
                 oFiles = document.getElementById("fileName").files,
@@ -23,20 +24,23 @@
 
 <div id="wrapper">
     {{> nav}}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Open pst file</h1>
-            </div>
-            <div class="col-md-12">
-                <div class="well">
-                    <form action="/pst-path" method="post" name="uploadForm">
-                    <p><input id="fileName" type="file" name="fileName" onchange="updateSize();" multiple> selected files: <span id="fileNum">0</span>; total size: <span id="fileSize">0</span></p>
-                    <p><input type="submit" value="Send file"></p>
-                    </form>
+    <div class="row">
+        <div class="col-md-3">
+            {{> treeview}}
+        </div>
 
-                </div>
-            </div>
+        <div class="col-md-8">
+            <h1>Open pst file</h1>
+        </div>
+        <div class="col-md-8">
+                <form action="/pst-path" method="post" name="uploadForm">
+                    <p><input id="fileName" type="file" name="fileName" onchange="updateSize();" multiple></p>
+                    <p>Selected files: <span id="fileNum">0</span></p>
+                    <p>Total size: <span id="fileSize">0</span></p>
+
+                    <p><input type="submit" class="btn btn-default" value="Send file"></p>
+                </form>
+
         </div>
     </div>
 
