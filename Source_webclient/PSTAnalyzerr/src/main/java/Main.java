@@ -11,6 +11,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+import static java.awt.Desktop.*;
 
 
 /**
@@ -19,7 +24,7 @@ import java.io.File;
 public class Main extends JFrame {
 
     static String fileName;
-    JButton btnStart, btnSearch;
+    JButton btnStart, btnSearch,btnOpenBrowser;
     JLabel labFile, labLaunch, labStatus;
     JTextField displayField;
 
@@ -70,11 +75,16 @@ public class Main extends JFrame {
         gbc.gridwidth = 3;
         frame.add(createPane(frame.getBackground()), gbc);
 
-        gbc.gridy = 4;
+        gbc.gridy = 5;
         gbc.gridx = 0;
         gbc.gridwidth = 3;
         labStatus = new JLabel("Status: Waiting for .pst file");
         frame.add(labStatus, gbc);
+
+        gbc.gridx = 2;
+        gbc.gridy = 4;
+        btnOpenBrowser = new JButton("Open browser");
+        frame.add(btnOpenBrowser, gbc);
 
         /**
          * Action for ... button
@@ -96,13 +106,29 @@ public class Main extends JFrame {
             }
         });
 
+        btnOpenBrowser.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(isDesktopSupported())
+                {
+                    try {
+                        getDesktop().browse(new URI("http://localhost:4567"));
+                    } catch (IOException e1) {
+                        e1.printStackTrace();
+                    } catch (URISyntaxException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }
+        });
+
         /**
          * Action for launch button
          */
         btnStart.setMnemonic(KeyEvent.VK_M);
         btnStart.addActionListener(e -> {
                     System.out.println("Client launch started..");
-                    initElasticSearch();
+                    initElasticSearch(fileName);
                     labStatus.setText("Status:  ElasticSearch is up and running  ");
                     Server s = new Server();
                     s.initServer();
@@ -126,7 +152,7 @@ public class Main extends JFrame {
         return pane;
     }
 
-    public static void initElasticSearch() {
+    public static void initElasticSearch(String filePath) {
         // TODO code application logic here
 
         //String fileName = "D:" + "\\" + "FAKS" + "\\" + "4_CETVRTA_GODINA" + "\\" + "Sigurnost_informacijskih_sustava" + "\\" + "PST_dat" + "\\" + "gvodomin@foi.hr.pst";
