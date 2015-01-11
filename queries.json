@@ -1,0 +1,125 @@
+
+1.UPIT KOJI VRAĆA SVE MAILOVE U FOLDERU 2. UPIT KOJI VRAĆA SVE MAILOVE JEDNOG POŠILJATELJA 
+3. UPIT KOJI VRAĆA SVE MAILOVE JEDNOG POŠILJATELJA -> samo mjenjaj parametre
+GET /pstindex/email/_search
+{
+    "query": {
+        "match": {
+           "folderName": "Inbox"
+        }
+    }
+}
+
+4. UPIT KOJI VRAĆA SVE MAILOVE OD DATUMA DO DATUMA
+GET /pstindex/email/_search
+{
+    "query": {
+        "filtered": {
+           "filter": {
+               "range": {
+                  "msgDeliveryTime": {
+                     "gt": "2014-01-01T14:29:50.000Z",
+                     "lt": "2014-12-05T14:29:50.000Z"
+                  }
+               }
+           }
+        } 
+    }
+}
+
+5. UPIT KOJI VRAĆA VELIČINU MAILOVA POREDANU OD NAJVEĆEG MAILOVA
+GET /pstindex/email/_search 
+{
+   "sort": [
+      {
+         "getMessageSize": {
+            "order": "desc"
+         }
+      }
+   ],
+   "query": {
+      "match_all": {}
+   }
+}
+
+6. UPIT KOJI VRAĆA BROJ MAILOVA PO DANU
+POST /pstindex/email/_search?search_type=count
+{
+   "query": {
+      "filtered": {
+         "filter": {
+            "range": {
+               "msgDeliveryTime": {
+                  "gt": "2014-01-01T14:29:50.000Z",
+                  "lt": "2014-12-05T14:29:50.000Z"
+               }
+            }
+         }
+      }
+   },
+   "aggs": {
+      "emails_per_day": {
+         "date_histogram": {
+            "field": "msgDeliveryTime",
+            "interval": "day",
+            "format": "yyyy-MM-dd",
+            "min_doc_count": 0,
+            "extended_bounds": {
+               "min": "2014-01-01",
+               "max": "2014-12-31"
+            }
+         }
+      }
+   }
+}
+
+7. UPIT KOJI VRAĆA BROJ MAILOVA PO SATU
+POST /pstindex/email/_search?search_type=count
+{
+    "query": {
+      "filtered": {
+         "filter": {
+            "range": {
+               "msgDeliveryTime": {
+                  "gt": "2014-01-01T14:29:50.000Z",
+                  "lt": "2014-12-05T14:29:50.000Z"
+               }
+            }
+         }
+      }
+   },
+    "aggs" : {
+        "articles_over_time" : {
+            "date_histogram" : {
+                "field" : "msgDeliveryTime",
+                "interval" : "hour",
+                "format" : "yyyy-MM-dd" 
+            }
+        }
+    }
+}
+
+8. UPIT KOJI VRAĆA COUNT MAILOVA U FOLEDRU INBOX PREMA POŠILJATELJU
+POST /pstindex/email/_search?search_type=count 
+{
+   "aggs": {
+      "sender": {
+         "terms": {
+            "field": "getSenderEmailAddress"
+         }
+      }
+   }
+}
+
+9. UPIT KOJI VRAĆA COUNT MAILOVA U FOLEDRU SENT PREMA POŠILJATELJU
+POST /pstindex/email/_search?search_type=count 
+{
+   "aggs": {
+      "sender": {
+         "terms": {
+            "field": "getDisplayTo"
+         }
+      }
+   }
+}
+

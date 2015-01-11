@@ -15,8 +15,8 @@ import java.util.*;
 public class PSTFileEmail {
 
     int depth = -1;
-    int index=0;
-    Map<String, Object> jsonDocument=new HashMap<String, Object>();
+    int index = 0;
+    Map<String, Object> jsonDocument = new HashMap<String, Object>();
     List<String> folderList = new ArrayList<String>();
 
     public void proccessFolder(PSTFolder folder) throws PSTException, IOException {
@@ -43,8 +43,43 @@ public class PSTFileEmail {
             while (email != null) {
                 index++;
 
-                //THESE ARE NOT ALL ATTRIBUTES
-               if (email.getBody() != null) {
+                if (folder.getDisplayName() != null) {
+                    jsonDocument.put("folderName", folder.getDisplayName());
+                } else {
+                    jsonDocument.put("folderName", "null");
+                }
+
+                if (email.getSenderName() != null) {
+                    jsonDocument.put("senderName", email.getSenderName());
+                } else {
+                    jsonDocument.put("senderName", "null");
+                }
+
+                if (email.getReceivedByAddress() != null) {
+                    jsonDocument.put("recievedAdress", email.getReceivedByAddress());
+                } else {
+                    jsonDocument.put("recievedAdress", "null");
+                }
+
+                if (email.getConversationTopic() != null) {
+                    jsonDocument.put("subject", email.getConversationTopic());
+                } else {
+                    jsonDocument.put("subject", "null");
+                }
+
+                if (email.getReplyRecipientNames() != null) {
+                    jsonDocument.put("getReplyRecipientNames", email.getReplyRecipientNames());
+                } else {
+                    jsonDocument.put("getReplyRecipientNames", "null");
+                }
+
+                if (email.getSenderEmailAddress() != null) {
+                    jsonDocument.put("getSenderEmailAddress", email.getSenderEmailAddress());
+                } else {
+                    jsonDocument.put("getSenderEmailAddress", "null");
+                }
+
+                if (email.getBody() != null) {
                     //jsonDocument.put("emailBody", email.getBody());
                 } else {
                     jsonDocument.put("emailBody", "null");
@@ -87,24 +122,6 @@ public class PSTFileEmail {
                     jsonDocument.put("numberOfRecipients", "null");
                 }
 
-                if (email.getReceivedByAddress() != null) {
-                    jsonDocument.put("recievedAdress", email.getReceivedByAddress());
-                } else {
-                    jsonDocument.put("recievedAdress", "null");
-                }
-
-                if (email.getSenderName() != null) {
-                    jsonDocument.put("senderName", email.getSenderName());
-                } else {
-                    jsonDocument.put("senderName", "null");
-                }
-
-                if (email.getConversationTopic() != null) {
-                    jsonDocument.put("subject", email.getConversationTopic());
-                } else {
-                    jsonDocument.put("subject", "null");
-                }
-
                 jsonDocument.put("deletedAfterSubmit", email.getDeleteAfterSubmit());
 
                 if (email.getDisplayTo() != null) {
@@ -143,28 +160,15 @@ public class PSTFileEmail {
 
                 jsonDocument.put("getNumberOfRecipients", email.getNumberOfRecipients());
 
-                jsonDocument.put("getOriginalSensitivity",email.getOriginalSensitivity());
+                jsonDocument.put("getOriginalSensitivity", email.getOriginalSensitivity());
 
                 jsonDocument.put("getPriority", email.getPriority());
-
-                if (email.getReplyRecipientNames() != null) {
-                    jsonDocument.put("getReplyRecipientNames", email.getReplyRecipientNames());
-                } else {
-                    jsonDocument.put("getReplyRecipientNames", "null");
-                }
-
-                if (email.getSenderEmailAddress() != null) {
-                    jsonDocument.put("getSenderEmailAddress", email.getSenderEmailAddress());
-                } else {
-                    jsonDocument.put("getSenderEmailAddress", "null");
-                }
 
                 if (email.getTaskStartDate() != null) {
                     jsonDocument.put("getTaskStartDate", email.getTaskStartDate());
                 } else {
                     jsonDocument.put("getTaskDueDate", "null");
                 }
-
 
                 jsonDocument.put("hasForwarded", email.hasForwarded());
 
@@ -179,17 +183,17 @@ public class PSTFileEmail {
                 jsonDocument.put("isUnsent", email.isUnsent());
 
                 if (email.getBodyHTML() != null) {
-                    jsonDocument.put("emailBodyHtml", email.getBodyHTML());
+                    //jsonDocument.put("emailBodyHtml", email.getBodyHTML());
                 } else {
                     jsonDocument.put("emailBodyHtml", "null");
                 }
                 if (email.getTransportMessageHeaders() != null) {
-                    jsonDocument.put("getTransportMessageHeaders", email.getTransportMessageHeaders());
+                    //jsonDocument.put("getTransportMessageHeaders", email.getTransportMessageHeaders());
                 } else {
                     jsonDocument.put("getTaskDueDate", "null");
                 }
 
-                System.out.println("BROJ INDEXA: "+String.valueOf(index));
+                System.out.println("BROJ INDEXA: " + String.valueOf(index));
                 CreateNode.client.prepareIndex("pstindex", "email", String.valueOf(index)).setSource(jsonDocument).execute().actionGet();
 
                 email = (PSTMessage) folder.getNextChild(); //get's next email in folder

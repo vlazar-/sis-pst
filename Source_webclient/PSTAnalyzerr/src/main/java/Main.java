@@ -127,9 +127,11 @@ public class Main extends JFrame {
     }
 
     public static void initElasticSearch() {
+        // TODO code application logic here
+
+        String fileName = "D:" + "\\" + "FAKS" + "\\" + "4_CETVRTA_GODINA" + "\\" + "Sigurnost_informacijskih_sustava" + "\\" + "PST_dat" + "\\" + "gvodomin@foi.hr.pst";
         System.out.println(fileName);
         CreateNode createNode = CreateNode.getInstance();
-        System.out.println("CLIENT DATA MOTHERFUCKER!!!!!: "+createNode.node.client().toString());
         DbConnect db = new DbConnect();
 
         if(db.CheckIfIndexExists()==true){
@@ -142,7 +144,7 @@ public class Main extends JFrame {
             }
         }
 
-        //db.CreateMapping();
+        db.CreateMapping();
 
         PSTFileEmail fileEmail = new PSTFileEmail();
         try {
@@ -151,6 +153,12 @@ public class Main extends JFrame {
         } catch (Exception e) {
             System.out.println(e.toString());
         }
+
+        createNode.GetEMailCountPerTime("2014-01-01T14:29:50.000Z", "2014-12-05T14:29:50.000Z","day");
+        createNode.GetEmailsPerSize();
+        createNode.GetEmailsPerDataField("folderName","Inbox");
+        createNode.GetEmailCountPerSenderInbox();
+        createNode.GetEmailCountPerSenderSent();
     }
 
 
