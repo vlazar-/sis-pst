@@ -1,6 +1,6 @@
 package Client.Controller;
 
-import static Client.JsonTransformer.json;
+import static Client.JsonTransformer.objectToJson;
 import static spark.Spark.*;
 import Client.Service.MailService;
 
@@ -10,6 +10,6 @@ import Client.Service.MailService;
 public class MailController {
 
     public MailController(final MailService mailService){
-        get("/mail", (req, res) -> mailService.index(), json());
+        get("/mail", (req, res) -> mailService.index());
     }
 }

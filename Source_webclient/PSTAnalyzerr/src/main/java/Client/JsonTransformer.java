@@ -14,11 +14,22 @@ public class JsonTransformer {
         return new Gson().toJson(object);
     }
 
+    public static String makeJestJson(io.searchbox.core.SearchResult jest){
+        return new Gson().toJson(jest);
+    }
+
     /**
-     * Transform returned object of HTTP response to Json object
+     * Transform returned object to Json
      * @return
      */
-    public static ResponseTransformer json(){
+    public static ResponseTransformer objectToJson(){
         return JsonTransformer::makeJson;
     }
+
+    /**
+     * Transform returned Jest object to Json
+     * @return
+     */
+   // public static ResponseTransformer jestToJson(){ return JsonTransformer::makeJestJson; }
+
 }

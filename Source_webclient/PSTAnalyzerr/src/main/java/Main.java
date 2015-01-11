@@ -129,7 +129,7 @@ public class Main extends JFrame {
     public static void initElasticSearch() {
         // TODO code application logic here
 
-        String fileName = "D:" + "\\" + "FAKS" + "\\" + "4_CETVRTA_GODINA" + "\\" + "Sigurnost_informacijskih_sustava" + "\\" + "PST_dat" + "\\" + "gvodomin@foi.hr.pst";
+        //String fileName = "D:" + "\\" + "FAKS" + "\\" + "4_CETVRTA_GODINA" + "\\" + "Sigurnost_informacijskih_sustava" + "\\" + "PST_dat" + "\\" + "gvodomin@foi.hr.pst";
         System.out.println(fileName);
         CreateNode createNode = CreateNode.getInstance();
         DbConnect db = new DbConnect();
