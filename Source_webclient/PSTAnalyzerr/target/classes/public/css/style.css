@@ -60,3 +60,9 @@
 .tree li.parent_li>span:hover, .tree li.parent_li>span:hover+ul li span {
     color:#000;
 }
+
+.mail-top{
+   height: 350px;
+}
+
+tbody {height: 450px; overflow: scroll;}

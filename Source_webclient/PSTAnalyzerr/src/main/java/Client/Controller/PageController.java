@@ -1,11 +1,8 @@
 package Client.Controller;
 
-
 import Client.Service.PageService;
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
-
-import static Client.JsonTransformer.json;
 import static spark.Spark.get;
 
 /**

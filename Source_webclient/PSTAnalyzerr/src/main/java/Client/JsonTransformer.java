@@ -1,6 +1,6 @@
 package Client;
 
-import com.google.gson.Gson;
+import com.google.gson.*;
 import spark.ResponseTransformer;
 
 /**
@@ -31,5 +31,14 @@ public class JsonTransformer {
      * @return
      */
    // public static ResponseTransformer jestToJson(){ return JsonTransformer::makeJestJson; }
+
+    /*public JsonArray parseJson(String jsonString){
+
+        JsonElement jsonElement = new JsonParser().parse(jsonString);
+        JsonObject jsonObject = jsonElement.getAsJsonObject();
+        jsonObject.getAsJsonObject("hits");
+        JsonArray jsonArray = jsonObject.getAsJsonArray("hits");
+        return jsonArray;
+    }/*/
 
 }

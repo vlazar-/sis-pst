@@ -24,7 +24,7 @@ import static java.awt.Desktop.*;
 public class Main extends JFrame {
 
     static String fileName;
-    JButton btnStart, btnSearch,btnOpenBrowser;
+    JButton btnStart, btnSearch, btnOpenBrowser;
     JLabel labFile, labLaunch, labStatus;
     JTextField displayField;
 
@@ -48,7 +48,7 @@ public class Main extends JFrame {
         gbc.gridy = 1;
         gbc.gridx = 0;
         gbc.gridwidth = 1;
-        labFile = new JLabel("1. Load .pst file: ");
+        labFile = new JLabel("1. Load .pst file ");
         frame.add(labFile, gbc);
 
         gbc.gridx = 1;
@@ -62,7 +62,7 @@ public class Main extends JFrame {
 
         gbc.gridy = 2;
         gbc.gridx = 0;
-        labLaunch = new JLabel("2. Launch client: ");
+        labLaunch = new JLabel("2. Launch client ");
         frame.add(labLaunch, gbc);
 
         gbc.gridx = 2;
@@ -72,19 +72,24 @@ public class Main extends JFrame {
 
         gbc.gridy = 3;
         gbc.gridx = 0;
+        gbc.gridwidth = 1;
+        labFile = new JLabel("3. Go to localhost:4567 ");
+        frame.add(labFile, gbc);
+
+        gbc.gridx = 2;
+        btnOpenBrowser = new JButton("Open browser");
+        btnOpenBrowser.setEnabled(false);
+        frame.add(btnOpenBrowser, gbc);
+
+        gbc.gridy = 4;
+        gbc.gridx = 0;
         gbc.gridwidth = 3;
         frame.add(createPane(frame.getBackground()), gbc);
 
         gbc.gridy = 5;
         gbc.gridx = 0;
-        gbc.gridwidth = 3;
         labStatus = new JLabel("Status: Waiting for .pst file");
         frame.add(labStatus, gbc);
-
-        gbc.gridx = 2;
-        gbc.gridy = 4;
-        btnOpenBrowser = new JButton("Open browser");
-        frame.add(btnOpenBrowser, gbc);
 
         /**
          * Action for ... button
@@ -127,12 +132,14 @@ public class Main extends JFrame {
          */
         btnStart.setMnemonic(KeyEvent.VK_M);
         btnStart.addActionListener(e -> {
+                    labStatus.setText("Status:  Parsing .pst file ");
                     System.out.println("Client launch started..");
                     initElasticSearch(fileName);
-                    labStatus.setText("Status:  ElasticSearch is up and running  ");
+                    labStatus.setText("Status:  ElasticSearch is up and running ");
                     Server s = new Server();
                     s.initServer();
                     labStatus.setText(labStatus.getText() + " - Point your browser to localhost:4567");
+                    btnOpenBrowser.setEnabled(true);
                 });
         frame.pack();
         frame.setLocationRelativeTo(null);
@@ -180,11 +187,11 @@ public class Main extends JFrame {
             System.out.println(e.toString());
         }
 
-        createNode.GetEMailCountPerTime("2014-01-01T14:29:50.000Z", "2014-12-05T14:29:50.000Z","day");
+        /*createNode.GetEMailCountPerTime("2014-01-01T14:29:50.000Z", "2014-12-05T14:29:50.000Z","day");
         createNode.GetEmailsPerSize();
         createNode.GetEmailsPerDataField("folderName","Inbox");
         createNode.GetEmailCountPerSenderInbox();
-        createNode.GetEmailCountPerSenderSent();
+        createNode.GetEmailCountPerSenderSent();*/
     }
 
 
