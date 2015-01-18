@@ -8,7 +8,9 @@ import io.searchbox.client.config.HttpClientConfig;
 import io.searchbox.core.Search;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Viktor on 08/01/2015.
@@ -17,6 +19,11 @@ public class MailService {
 
     Map mail = new HashMap<>();
 
+    /**
+     * Returns all emails from PST index.
+     *
+     * @return
+     */
     public Map index() {
         JestClientFactory factory = new JestClientFactory();
         factory.setHttpClientConfig(new HttpClientConfig
@@ -46,7 +53,13 @@ public class MailService {
         return null;
     }
 
-    public Map getFolder(String folder){
+    /**
+     * Returns list of folders from PST indeks.
+     *
+     * @param folder
+     * @return
+     */
+    public Map getFolder(String folder) {
         JestClientFactory factory = new JestClientFactory();
         factory.setHttpClientConfig(new HttpClientConfig
                 .Builder("http://localhost:9200/")
@@ -56,9 +69,9 @@ public class MailService {
         String query = "{\n" +
                 " \"size\": 5000, " +
                 "   \"query\": {\n" +
-                "       \"query_string\": {"+
-                "           \"query\": \"folderName:"+ folder +"\" \n" +
-                "        }\n"+
+                "       \"query_string\": {" +
+                "           \"query\": \"folderName:" + folder + "\" \n" +
+                "        }\n" +
                 "   }\n" +
                 "}";
 
@@ -78,7 +91,13 @@ public class MailService {
         return null;
     }
 
-    public Map getSingle(String id){
+    /**
+     * Returns email for single id.
+     *
+     * @param id email id.
+     * @return JSON email object.
+     */
+    public Map getSingle(String id) {
         JestClientFactory factory = new JestClientFactory();
         factory.setHttpClientConfig(new HttpClientConfig
                 .Builder("http://localhost:9200/")
@@ -91,7 +110,7 @@ public class MailService {
                 "    \"query_string\": { \n" +
                 "       \"query\": \n" +
                 "           \"internetMessageId:" + id + "\" \n" +
-                "        }\n"+
+                "        }\n" +
                 "   }\n" +
                 "}";
 
@@ -111,6 +130,13 @@ public class MailService {
         return null;
     }
 
+    /**
+     * Parse response from pst index. Remove meta data.
+     *
+     * @param jsonString
+     * @param responseName
+     * @return
+     */
     public Map parseResponse(String jsonString, String responseName) {
         //JsonArray result = new JsonArray();
         JSONArray re = new JSONArray();
@@ -120,7 +146,7 @@ public class MailService {
         JSONArray b = a.getJSONArray("hits");
 
 
-        for(int i=0; i<b.length(); i++){
+        for (int i = 0; i < b.length(); i++) {
             JSONObject t = b.getJSONObject(i);
             t = t.getJSONObject("_source");
             re.put(t);

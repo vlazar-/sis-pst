@@ -26,29 +26,41 @@ public class DbConnect {
     HashMap<String, Object> settings;
     CreateIndexResponse createIndexResponse = null;
 
+    /**
+     * Creates index based on index name.
+     *
+     * @param indexName
+     * @return
+     */
     public boolean CreateIndex(String indexName) {
-        cirb = CreateNode.client.admin().indices().prepareCreate(indexName);//kreira index u kojem ce biti pohranjeni podaci, nešto poput baze podataka
+        //creates index with specific index name
+        cirb = CreateNode.client.admin().indices().prepareCreate(indexName);
         settings = new HashMap<>();
-        //svi podaci ce se spremiti u samo jednom shard-u, u dokumentaciji od elasticsearcha je objasnjen shard;
+        //all data stored in one shard
+        //Specified in yml file inside resources folder
         settings.put("number_of_shards", 1);
-        //broj indexa koji odgovaraju upitu u clusteru
         settings.put("number_of_replicas", 1);
         cirb.setSettings(settings);
         try {
             createIndexResponse = cirb.execute().actionGet();
         } catch (IndexAlreadyExistsException e) {
-            //index pod tim imenom vec postoji
+            //index already exists
             e.printStackTrace();
         }
         if (createIndexResponse != null && createIndexResponse.isAcknowledged()) {
-            //index je uspjesno kreiran
+            //index created
             return true;
         } else {
-            //index nije kreiran
+            //index not created
             return false;
         }
     }
 
+    /**
+     * Deletes index with specific index name.
+     *
+     * @param indexName
+     */
     public void DeleteIndex(String indexName) {
         final DeleteIndexRequest deleteIndexRequest = new DeleteIndexRequest(indexName);
         final DeleteIndexResponse deleteIndexResponse = CreateNode.client.admin().indices().delete(deleteIndexRequest).actionGet();
@@ -59,6 +71,11 @@ public class DbConnect {
         }
     }
 
+    /**
+     * Checks if index already exists.
+     *
+     * @return
+     */
     public boolean CheckIfIndexExists() {
         IndicesExistsResponse existsResponse = CreateNode.client.admin().indices().prepareExists("pstindex").execute().actionGet();
         if (existsResponse.isExists())
@@ -67,6 +84,10 @@ public class DbConnect {
             return false;
     }
 
+    /**
+     * Mapping for created index.
+     * Currently specifies that senderEmailAddress and To fields are not analyzed.
+     */
     public void CreateMapping() {
         try {
             String mapiranje = "{\n" +
@@ -92,9 +113,9 @@ public class DbConnect {
                     execute().
                     actionGet();
             if (response.isAcknowledged())
-                System.out.println("MAPIRANJE JE NAPRAVLJENO");
+                System.out.println("MAPPING CREATED");
             else
-                System.out.println("MAPRIANJE NIJE NAPRAVLJENO");
+                System.out.println("MAPPING NOT CREATED");
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -19,6 +19,13 @@ public class PSTFileEmail {
     Map<String, Object> jsonDocument = new HashMap<String, Object>();
     List<String> folderList = new ArrayList<String>();
 
+    /**
+     * Method that goes trough all PST folders of PST file. For each email creates JSON Document
+     * which is beeing stored into Elastisearch index.
+     * @param folder Folders of PST file.
+     * @throws PSTException
+     * @throws IOException
+     */
     public void proccessFolder(PSTFolder folder) throws PSTException, IOException {
         depth++;
 
@@ -42,7 +49,6 @@ public class PSTFileEmail {
             PSTMessage email = (PSTMessage) folder.getNextChild();
             while (email != null) {
                 index++;
-
                 if (folder.getDisplayName() != null) {
                     jsonDocument.put("folderName", folder.getDisplayName());
                 } else {
@@ -185,7 +191,7 @@ public class PSTFileEmail {
                 if (email.getBodyHTML() != null) {
                     //jsonDocument.put("emailBodyHtml", email.getBodyHTML());
                 } else {
-                   // jsonDocument.put("emailBodyHtml", "null");
+                    // jsonDocument.put("emailBodyHtml", "null");
                 }
                 if (email.getTransportMessageHeaders() != null) {
                     jsonDocument.put("getTransportMessageHeaders", email.getTransportMessageHeaders());
@@ -207,7 +213,7 @@ public class PSTFileEmail {
      * Method that return list of folder names. It assumed to be used on form
      * where will be displayed list of all folders and subfolder.
      *
-     * @return
+     * @return Folder list.
      */
     public List<String> GetFolderList() {
         return folderList;

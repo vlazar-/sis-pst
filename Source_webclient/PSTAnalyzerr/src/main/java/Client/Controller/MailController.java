@@ -36,7 +36,9 @@ public class MailController {
 
         //get("/mail-single/:id", (request, response) -> mailService.getSingle(request.params(":id")));
         get("/mail-single/:id", (request, response) -> new ModelAndView(mailService.getSingle(request.params(":id")), "pages/mail-single.mustache"), new MustacheTemplateEngine());
-
+        /**
+         * API queries.
+         */
         get("/API/v1/getEmail/:id", (request, response) -> new GetEmail().getEmail(request.params(":id")));
         get("/API/v1/getEmailFromKeyword/:keyword", (request, response) -> new GetEmail().getEmail(request.params(":id")));
     }

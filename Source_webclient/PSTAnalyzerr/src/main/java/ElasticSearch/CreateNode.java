@@ -29,7 +29,7 @@ public class CreateNode {
     }
 
     /**
-     * Method that creates new instance of returns existing
+     * Method that creates new instance of returns existing -> Singletone
      */
     public static CreateNode getInstance() {
         if (instance == null) {
@@ -48,6 +48,13 @@ public class CreateNode {
         node.close();
     }
 
+    /**
+     * Testing query. Returns email count between specific date.
+     *
+     * @param gt   start date in specified format (e.g.:2014-05-25T11:16:12.000Z)
+     * @param lt   end date in specified format (e.g.:2014-05-25T11:16:12.000Z)
+     * @param time interval
+     */
     public void GetEMailCountPerTime(String gt, String lt, String time) {
         JestClientFactory factory = new JestClientFactory();
         factory.setHttpClientConfig(new HttpClientConfig
@@ -91,12 +98,15 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITA:" + result.getJsonString());
+            System.out.println("Query result:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * Testing query. Returns emails per size, sorted descending.
+     */
     public void GetEmailsPerSize() {
         JestClientFactory factory = new JestClientFactory();
         factory.setHttpClientConfig(new HttpClientConfig
@@ -121,12 +131,18 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITA:" + result.getJsonString());
+            System.out.println("Query result:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * Testing query. Returns emails bigger than param, and smaler than param2
+     *
+     * @param param  min size of email
+     * @param param2 max size of email
+     */
     public void GetEmailsPerDataField(String param, String param2) {
         JestClientFactory factory = new JestClientFactory();
         factory.setHttpClientConfig(new HttpClientConfig
@@ -145,13 +161,16 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITA:" + result.getJsonString());
+            System.out.println("Query result:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
 
+    /**
+     * Test query. Returns sender from email addresses.
+     */
     public void GetEmailCountPerSenderInbox() {
         JestClientFactory factory = new JestClientFactory();
         factory.setHttpClientConfig(new HttpClientConfig
@@ -172,12 +191,15 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITA:" + result.getJsonString());
+            System.out.println("Query result:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * Test query. Returns number of email per sender.
+     */
     public void GetEmailCountPerSenderSent() {
         JestClientFactory factory = new JestClientFactory();
         factory.setHttpClientConfig(new HttpClientConfig
@@ -198,7 +220,7 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITA:" + result.getJsonString());
+            System.out.println("Query result:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }

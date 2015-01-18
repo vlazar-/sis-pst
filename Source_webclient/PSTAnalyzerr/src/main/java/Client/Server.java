@@ -18,7 +18,9 @@ import spark.template.mustache.MustacheTemplateEngine;
  * Created by Viktor on 15/12/2014.
  */
 public class Server {
-
+    /**
+     * Initializes Jetty server and specifies static file location.
+     */
     public void initServer()
     {
         /*

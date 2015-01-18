@@ -83,26 +83,6 @@ public class GetEmail {
 
         return JSONParser.jsonToMap(fr);
 
-            /*JsonElement jsonElement = new JsonParser().parse(jsonString);
-            JsonObject jsonObject = jsonElement.getAsJsonObject();
-            jsonObject.getAsJsonObject("hits");     //top level
-            jsonObject = jsonObject.getAsJsonObject("hits"); //level -1
-            JsonArray jsonArray = jsonObject.getAsJsonArray("hits"); //level -2
-            for (JsonElement r : jsonArray) {
-                JsonObject temp = r.getAsJsonObject();
-                temp = temp.getAsJsonObject("_source");
-                //JsonObject mail = new JsonObject();
-                //mail.add("mail", temp);
-                result.add(temp);
 
-            }
-
-            JsonObject final_result = new JsonObject();
-            final_result.add("mail", result);
-
-            JsonParser jsonParser = new JsonParser();
-            JsonObject jo = (JsonObject)jsonParser.parse(json);
-            String ma = final_result.toString();
-            JSONObject jo = new JSONObject(ma);*/
     }
 }

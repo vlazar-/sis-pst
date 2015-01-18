@@ -3,9 +3,8 @@ import ElasticSearch.CreateNode;
 import ElasticSearch.DbConnect;
 import PST.PSTFileEmail;
 import com.pff.PSTFile;
+
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +14,8 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import static java.awt.Desktop.*;
+import static java.awt.Desktop.getDesktop;
+import static java.awt.Desktop.isDesktopSupported;
 
 
 /**
@@ -28,6 +28,9 @@ public class Main extends JFrame {
     JLabel labFile, labLaunch, labStatus;
     JTextField displayField;
 
+    /**
+     * Initializes Elasticsearch, Spark, loads data into Eleasticsearch.
+     */
     public Main() {
 
         JFrame frame = new JFrame("PSTAnalyzerr");
@@ -100,29 +103,27 @@ public class Main extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
                 JFileChooser openFile = new JFileChooser();
 
-                //FileFilter type = new FileNameExtensionFilter(".pst", ".pst");
-                //openFile.setFileFilter(type);
                 openFile.showOpenDialog(null);
 
                 File selectedPst = openFile.getSelectedFile();
                 displayField.setText(selectedPst.getAbsolutePath());
                 fileName = selectedPst.getAbsolutePath();
 
-                //dcheck if file is  pst
-                if(fileName.endsWith(".pst")){
+                //check if file is  pst
+                if (fileName.endsWith(".pst")) {
                     labStatus.setText("Status:  Valid pst file selected.");
                     btnStart.setEnabled(true);
-                }else{
+                } else {
                     labStatus.setText("Status:  Invalid pst file selected");
                 }
             }
         });
 
+        //Launches default Web browser.
         btnOpenBrowser.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(isDesktopSupported())
-                {
+                if (isDesktopSupported()) {
                     try {
                         getDesktop().browse(new URI("http://localhost:4567"));
                     } catch (IOException e1) {
@@ -139,22 +140,28 @@ public class Main extends JFrame {
          */
         btnStart.setMnemonic(KeyEvent.VK_M);
         btnStart.addActionListener(e -> {
-                    labStatus.setText("Status:  Parsing .pst file ");
-                    System.out.println("Client launch started..");
-                    initElasticSearch(fileName);
-                    labStatus.setText("Status:  ElasticSearch is up and running ");
-                    Server s = new Server();
-                    s.initServer();
-                    labStatus.setText(labStatus.getText() + " - Point your browser to localhost:4567");
-                    btnOpenBrowser.setEnabled(true);
-                });
+            labStatus.setText("Status:  Parsing .pst file ");
+            System.out.println("Client launch started..");
+            initElasticSearch(fileName);
+            labStatus.setText("Status:  ElasticSearch is up and running ");
+            Server s = new Server();
+            s.initServer();
+            labStatus.setText(labStatus.getText() + " - Point your browser to localhost:4567");
+            btnOpenBrowser.setEnabled(true);
+        });
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
     }
+
+    /**
+     * Creates JPanel for frame.
+     *
+     * @param color
+     * @return
+     */
     public JPanel createPane(Color color) {
-        JPanel pane = new JPanel(){
+        JPanel pane = new JPanel() {
 
             @Override
             public Dimension getPreferredSize() {
@@ -166,24 +173,27 @@ public class Main extends JFrame {
         return pane;
     }
 
+    /**
+     * Creates node, checks if index exist, creates mapping, loads data into created Index.
+     *
+     * @param filePath File path for PST
+     */
     public static void initElasticSearch(String filePath) {
-        // TODO code application logic here
-
-        //String fileName = "D:" + "\\" + "FAKS" + "\\" + "4_CETVRTA_GODINA" + "\\" + "Sigurnost_informacijskih_sustava" + "\\" + "PST_dat" + "\\" + "gvodomin@foi.hr.pst";
         System.out.println(fileName);
         CreateNode createNode = CreateNode.getInstance();
         DbConnect db = new DbConnect();
 
-        if(db.CheckIfIndexExists()==true){
-            System.out.println("OBRISAN JE INDEKS");
+        if (db.CheckIfIndexExists() == true) {
+            System.out.println("INDEX DELETED");
             db.DeleteIndex("pstindex");
         }
-        if(db.CheckIfIndexExists()==false) {
+        if (db.CheckIfIndexExists() == false) {
             if (db.CreateIndex("pstindex") == true) {
-                System.out.println("NAPRAVLJEN JE INDEKS");
+                System.out.println("INDEX CREATED");
             }
         }
 
+        //creates mapping
         db.CreateMapping();
 
         PSTFileEmail fileEmail = new PSTFileEmail();
