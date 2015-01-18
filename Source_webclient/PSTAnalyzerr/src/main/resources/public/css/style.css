@@ -66,3 +66,9 @@
 }
 
 tbody {height: 450px; overflow: scroll;}
+
+.tablecontainer{
+    height: 400px;
+    border: 1px solid #2C3E50;
+    overflow: scroll;
+}

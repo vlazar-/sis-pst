@@ -107,7 +107,14 @@ public class Main extends JFrame {
                 File selectedPst = openFile.getSelectedFile();
                 displayField.setText(selectedPst.getAbsolutePath());
                 fileName = selectedPst.getAbsolutePath();
-                btnStart.setEnabled(true);
+
+                //dcheck if file is  pst
+                if(fileName.endsWith(".pst")){
+                    labStatus.setText("Status:  Valid pst file selected.");
+                    btnStart.setEnabled(true);
+                }else{
+                    labStatus.setText("Status:  Invalid pst file selected");
+                }
             }
         });
 

@@ -80,7 +80,7 @@ public class PSTFileEmail {
                 }
 
                 if (email.getBody() != null) {
-                    //jsonDocument.put("emailBody", email.getBody());
+                    jsonDocument.put("emailBody", email.getBody());
                 } else {
                     jsonDocument.put("emailBody", "null");
                 }
@@ -185,10 +185,10 @@ public class PSTFileEmail {
                 if (email.getBodyHTML() != null) {
                     //jsonDocument.put("emailBodyHtml", email.getBodyHTML());
                 } else {
-                    jsonDocument.put("emailBodyHtml", "null");
+                   // jsonDocument.put("emailBodyHtml", "null");
                 }
                 if (email.getTransportMessageHeaders() != null) {
-                    //jsonDocument.put("getTransportMessageHeaders", email.getTransportMessageHeaders());
+                    jsonDocument.put("getTransportMessageHeaders", email.getTransportMessageHeaders());
                 } else {
                     jsonDocument.put("getTaskDueDate", "null");
                 }

@@ -91,7 +91,7 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITAAAAAAAAAAAAAAA:" + result.getJsonString());
+            System.out.println("REZULTAT UPITA:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -121,7 +121,7 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITAAAAAAAAAAAAAAA:" + result.getJsonString());
+            System.out.println("REZULTAT UPITA:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -145,7 +145,7 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITAAAAAAAAAAAAAAA:" + result.getJsonString());
+            System.out.println("REZULTAT UPITA:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -172,7 +172,7 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITAAAAAAAAAAAAAAA:" + result.getJsonString());
+            System.out.println("REZULTAT UPITA:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -198,7 +198,7 @@ public class CreateNode {
 
         try {
             io.searchbox.core.SearchResult result = clienttt.execute(search);
-            System.out.println("REZULTAT UPITAAAAAAAAAAAAAAA:" + result.getJsonString());
+            System.out.println("REZULTAT UPITA:" + result.getJsonString());
         } catch (Exception e) {
             e.printStackTrace();
         }
