@@ -11,9 +11,6 @@
             {{> treeview}}
         </div>
         <div class="col-md-9">
-            <div class="singlecontainer well">
-                <p>TO DO: show single mail data</p>
-            </div>
             <div class="tablecontainer">
                 <table class="table table-striped">
                     <thead style="background-color: #2c3e50; color: #18bc9c;">
@@ -27,22 +24,21 @@
                     </tr>
                     </thead>
                     <tbody>
-                        <tr>
                         {{#mail}}
-
                             <tr>
-                                <td>{{subject}}</td>
+                                <td><a class="getSingle" href="/mail-single/{{internetMessageId}}"> {{subject}}</a></td>
                                 <td>{{getSenderEmailAddress}}</td>
                                 <td>{{recievedAdress}}</td>
                                 <td>{{folderName}}</td>
                                 <td>{{messageDeliveryTime}}</td>
                                 <td>{{getNumberOfAttachments}}</td>
                             </tr>
-
                         {{/mail}}
-                        </tr>
                     </tbody>
                 </table>
+            </div>
+            <div id="single" class="singlecontainer">
+
             </div>
         </div>
     </div>

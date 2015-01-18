@@ -2,21 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45171e04-f17b-4c3d-9d40-6b2f3bb30f28" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\martina\Documents\GitRepos\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\_state\global-438" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\martina\Documents\GitRepos\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\pstindex\0\index\segments_1" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\martina\Documents\GitRepos\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\pstindex\0\translog\translog-1421323727933" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/Client/Service/GetEmail.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/kibana-int/2/index/_9.cfe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/kibana-int/2/index/_9.cfs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/kibana-int/2/index/_9.si" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/kibana-int/2/index/_9_1.del" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/0/index/segments_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/kibana-int/2/index/segments_6" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\.idea\libraries\Maven__com_sparkjava_spark_template_freemarker_2_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\.idea\libraries\Maven__org_freemarker_freemarker_2_3_19.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\_state\global-440" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\0\_state\state-36" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\1\_state\state-36" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\2\_state\state-36" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\2\index\_5.cfe" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\2\index\_5.cfs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\2\index\_5.si" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\2\index\_8.cfe" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\2\index\_8.cfs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\2\index\_8.si" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\2\index\segments_5" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\2\translog\translog-1421516091819" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\3\_state\state-36" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\kibana-int\4\_state\state-4" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\pstindex\0\index\_1.cfe" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\pstindex\0\index\_1.cfs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\pstindex\0\index\_1.si" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\pstindex\0\index\segments_2" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\src\main\resources\public\css\sb-admin-2.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\target\classes\public\css\sb-admin-2.css" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\data\elasticsearch\nodes\0\indices\pstindex\0\translog\translog-1421570010799" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/kibana-int/2/translog/translog-1421516091820" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ElasticSearch/CreateNode.class" afterPath="$PROJECT_DIR$/target/classes/ElasticSearch/CreateNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Client/Controller/FileController.class" afterPath="$PROJECT_DIR$/target/classes/Client/Controller/FileController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Client/Controller/MailController.class" afterPath="$PROJECT_DIR$/target/classes/Client/Controller/MailController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Client/Service/MailService.class" afterPath="$PROJECT_DIR$/target/classes/Client/Service/MailService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main$1.class" afterPath="$PROJECT_DIR$/target/classes/Main$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main$2.class" afterPath="$PROJECT_DIR$/target/classes/Main$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main$3.class" afterPath="$PROJECT_DIR$/target/classes/Main$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main$4.class" afterPath="$PROJECT_DIR$/target/classes/Main$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/PST/PSTFileEmail.class" afterPath="$PROJECT_DIR$/target/classes/PST/PSTFileEmail.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Client/Controller/PageController.class" afterPath="$PROJECT_DIR$/target/classes/Client/Controller/PageController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/0/index/_0.cfe" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/0/index/_0.cfe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/0/index/_0.cfs" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/0/index/_0.cfs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/0/index/_0.si" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/0/index/_0.si" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/kibana-int/2/index/segments.gen" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/kibana-int/2/index/segments.gen" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/0/index/segments.gen" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/0/index/segments.gen" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/_state/state-5" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/pstindex/_state/state-5" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Client/Controller/MailController.java" afterPath="$PROJECT_DIR$/src/main/java/Client/Controller/MailController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Client/Service/MailService.java" afterPath="$PROJECT_DIR$/src/main/java/Client/Service/MailService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/footer.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/footer.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/pages/footer.mustache" afterPath="$PROJECT_DIR$/target/classes/templates/pages/footer.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/header.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/header.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/pages/header.mustache" afterPath="$PROJECT_DIR$/target/classes/templates/pages/header.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/index.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/index.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/pages/index.mustache" afterPath="$PROJECT_DIR$/target/classes/templates/pages/index.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/mail.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/mail.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/pages/mail.mustache" afterPath="$PROJECT_DIR$/target/classes/templates/pages/mail.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/nav.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/nav.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/pages/nav.mustache" afterPath="$PROJECT_DIR$/target/classes/templates/pages/nav.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/js/script.js" afterPath="$PROJECT_DIR$/src/main/resources/public/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/public/js/script.js" afterPath="$PROJECT_DIR$/target/classes/public/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/public/css/style.css" afterPath="$PROJECT_DIR$/target/classes/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/pages/treeview.mustache" afterPath="$PROJECT_DIR$/src/main/resources/templates/pages/treeview.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/pages/treeview.mustache" afterPath="$PROJECT_DIR$/target/classes/templates/pages/treeview.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PSTAnalyzerr.iws" />
@@ -44,92 +95,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DbConnect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ElasticSearch/DbConnect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1598">
-              <caret line="96" column="65" selection-start-line="96" selection-start-column="65" selection-end-line="96" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#3944#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ElasticSearch/CreateNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="3468">
-              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1198#1199#0" expanded="false" />
-                <element signature="e#1226#1227#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2958" max-vertical-offset="3298">
-              <caret line="193" column="50" selection-start-line="193" selection-start-column="50" selection-end-line="193" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#4754#4755#0" expanded="false" />
-                <element signature="e#4814#4815#0" expanded="false" />
-                <element signature="e#6287#6288#0" expanded="false" />
-                <element signature="e#6322#6323#0" expanded="false" />
-                <element signature="e#6566#6567#0" expanded="false" />
-                <element signature="e#6607#6608#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MailController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/MailController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="391">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="867">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/PageController.java">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="408">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="134" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Client/Service/PageService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="425">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1059" max-vertical-offset="1717">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/FileController.java">
+      <file leaf-file-name="mail-single.mustache" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/mail-single.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="442">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.43037975" vertical-offset="0" max-vertical-offset="765">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#1157#1176#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,30 +132,70 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.mustache" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.mustache" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/header.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="408">
+              <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.mustache" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/index.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5" vertical-offset="1" max-vertical-offset="578">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            <state vertical-scroll-proportion="-2.7307692" vertical-offset="354" max-vertical-offset="1088">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Client/Service/MailService.java">
+      <file leaf-file-name="treeview.mustache" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/treeview.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1530">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="27" />
+            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="527">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.mustache" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/nav.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="170">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.mustache" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/footer.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="170">
+              <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mail.mustache" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/mail.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="918">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="57" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#303#353#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,34 +221,37 @@
         <option value="$PROJECT_DIR$/src/main/resources/public/css/theme.min.css" />
         <option value="$PROJECT_DIR$/src/main/java/Client/Server.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/css/sb-admin-2.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/header.mustache" />
         <option value="$PROJECT_DIR$/target/classes/templates/pages/treeview.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pages/pst-open.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pages/search.mustache" />
         <option value="$PROJECT_DIR$/src/main/java/PST/PSTFileEmail.java" />
         <option value="$PROJECT_DIR$/src/main/java/ElasticSearch/DbConnect.java" />
         <option value="$PROJECT_DIR$/src/main/java/Client/Controller/FileController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/nav.mustache" />
         <option value="$PROJECT_DIR$/src/main/resources/public/kibana-3.1.2/config.js" />
         <option value="$PROJECT_DIR$/src/main/java/Client/Controller/PageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Client/JsonTransformer.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pages/hello.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/hello.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/Client/Model/Mail.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/js/script.js" />
         <option value="$PROJECT_DIR$/src/main/java/Client/Controller/MustacheRender.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/footer.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/treeview.mustache" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/Client/JSONParser.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/mail.mustache" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Client/Service/MailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ElasticSearch/CreateNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Client/Controller/MailController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Client/Service/PageService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/nav.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/treeview.mustache" />
+        <option value="$PROJECT_DIR$/src/main/java/Client/Service/MailService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/js/mustache.min.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pages/index.mustache" />
+        <option value="$PROJECT_DIR$/src/main/java/Client/Controller/MailController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/header-mail.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/mail.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/footer.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/header.mustache" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/js/script.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pages/mail-single.mustache" />
       </list>
     </option>
   </component>
@@ -231,8 +268,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -640,7 +677,8 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="mail&#9;FILE&#9;file://C:/Users/Viktor/Documents/foi/sis-pst/Source_webclient/PSTAnalyzerr/src/main/java/Client/Service/MailService.java&#10;mai&#9;FILE&#9;file://C:/Users/Viktor/Documents/foi/sis-pst/Source_webclient/PSTAnalyzerr/src/main/java/Client/Service/MailService.java&#10;main&#9;FILE&#9;file://C:/Users/Viktor/Documents/foi/sis-pst/Source_webclient/PSTAnalyzerr/src/main/java/Main.java" />
+    <property name="SearchEverywhereHistoryKey" value="footer&#9;FILE&#9;file://C:/Users/Viktor/Documents/novooo/sis-pst/Source_webclient/PSTAnalyzerr/src/main/resources/templates/pages/footer.mustache&#10;style&#9;FILE&#9;file://C:/Users/Viktor/Documents/novooo/sis-pst/Source_webclient/PSTAnalyzerr/src/main/resources/public/css/style.css&#10;nav&#9;FILE&#9;file://C:/Users/Viktor/Documents/novooo/sis-pst/Source_webclient/PSTAnalyzerr/src/main/resources/templates/pages/nav.mustache&#10;s&#9;FILE&#9;file://C:/Users/Viktor/Documents/novooo/sis-pst/Source_webclient/PSTAnalyzerr/src/main/resources/public/css/style.css&#10;inde&#9;FILE&#9;file://C:/Users/Viktor/Documents/novooo/sis-pst/Source_webclient/PSTAnalyzerr/src/main/resources/templates/pages/index.mustache&#10;header&#9;FILE&#9;file://C:/Users/Viktor/Documents/novooo/sis-pst/Source_webclient/PSTAnalyzerr/src/main/resources/templates/pages/header.mustache&#10;mail&#9;FILE&#9;file://C:/Users/Viktor/Documents/foi/sis-pst/Source_webclient/PSTAnalyzerr/src/main/java/Client/Service/MailService.java&#10;mai&#9;FILE&#9;file://C:/Users/Viktor/Documents/foi/sis-pst/Source_webclient/PSTAnalyzerr/src/main/java/Client/Service/MailService.java&#10;main&#9;FILE&#9;file://C:/Users/Viktor/Documents/foi/sis-pst/Source_webclient/PSTAnalyzerr/src/main/java/Main.java" />
+    <property name="jsx.switch.disabled" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -649,11 +687,11 @@
       <recent name="C:\Users\martina\Documents\GitRepos\sis-pst\Source_webclient\PSTAnalyzerr\src\main\resources\public\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\src\main\resources\public\css" />
+      <recent name="C:\Users\Viktor\Documents\novooo\sis-pst\Source_webclient\PSTAnalyzerr\src\main\resources\public\js" />
       <recent name="C:\Users\Viktor\Documents\foi\sis-pst\Source_webclient\PSTAnalyzerr\src\main\resources\spark\template\freemarker" />
       <recent name="C:\Users\Viktor\Documents\foi\sis-pst\Source_webclient\PSTAnalyzerr\src\main\resources\templates\pages" />
       <recent name="C:\Users\Viktor\Documents\foi\sis-pst\Source_webclient\PSTAnalyzerr\src\main\resources\templates\pages\ftl" />
-      <recent name="C:\Users\Viktor\IdeaProjects\PSTAnalyzerr\src\main\resources\public\fonts" />
-      <recent name="C:\Users\Viktor\IdeaProjects\PSTAnalyzerr\src\main\resources\public\css" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -994,20 +1032,21 @@
       <workItem from="1421304564573" duration="15378000" />
       <workItem from="1421513890777" duration="1145000" />
       <workItem from="1421569831568" duration="621000" />
+      <workItem from="1421604154221" duration="8651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140075000" />
+    <option name="totallyTimeSpent" value="148726000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32160804" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32128513" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1015,10 +1054,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17114094" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2831766" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19818456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26458332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1090,42 +1129,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1680" max-vertical-offset="3366">
-          <caret line="193" column="50" selection-start-line="193" selection-start-column="50" selection-end-line="193" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4754#4755#0" expanded="false" />
-            <element signature="e#4814#4815#0" expanded="false" />
-            <element signature="e#6287#6288#0" expanded="false" />
-            <element signature="e#6322#6323#0" expanded="false" />
-            <element signature="e#6566#6567#0" expanded="false" />
-            <element signature="e#6607#6608#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/MailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="442">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/PageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="408">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="134" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Client/Service/PageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
@@ -1138,9 +1141,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="544">
           <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,7 +1166,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1666">
           <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1226,13 +1227,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/sb-admin-2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6239">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/templates/pages/search.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="410">
@@ -1241,13 +1235,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/templates/pages/treeview.mustache">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.633333" vertical-offset="357" max-vertical-offset="782">
           <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/pst-open.mustache">
@@ -1285,24 +1279,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/nav.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="82" max-vertical-offset="1275">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/kibana-3.1.2/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1462">
           <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Service/FileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1355,49 +1335,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/footer.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="483">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="698" max-vertical-offset="1241">
-          <caret line="67" column="38" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/mail.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="986">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2397">
           <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/treeview.mustache">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="476">
-          <caret line="3" column="82" selection-start-line="3" selection-start-column="82" selection-end-line="3" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/header.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="561">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1412,10 +1354,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1598">
           <caret line="96" column="65" selection-start-line="96" selection-start-column="65" selection-end-line="96" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#3944#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1423,75 +1362,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="3468">
           <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1198#1199#0" expanded="false" />
-            <element signature="e#1226#1227#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1680" max-vertical-offset="3366">
-          <caret line="193" column="50" selection-start-line="193" selection-start-column="50" selection-end-line="193" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4754#4755#0" expanded="false" />
-            <element signature="e#4814#4815#0" expanded="false" />
-            <element signature="e#6287#6288#0" expanded="false" />
-            <element signature="e#6322#6323#0" expanded="false" />
-            <element signature="e#6566#6567#0" expanded="false" />
-            <element signature="e#6607#6608#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/MailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/PageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="134" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2958" max-vertical-offset="3417">
+          <caret line="193" column="45" selection-start-line="193" selection-start-column="45" selection-end-line="193" selection-end-column="45" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Service/MailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1503,11 +1382,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Service/FileService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Service/GetEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1632">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Service/MailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="461" max-vertical-offset="2754">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Controller/MailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="158" max-vertical-offset="867">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/index.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5" vertical-offset="1" max-vertical-offset="578">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state vertical-scroll-proportion="-2.7307692" vertical-offset="354" max-vertical-offset="1088">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/header.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="408">
+          <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/treeview.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="527">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/mail.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="918">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="57" />
+          <folding>
+            <element signature="e#303#353#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/footer.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="170">
+          <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/nav.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="170">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1059" max-vertical-offset="1717">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/mail-single.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43037975" vertical-offset="0" max-vertical-offset="765">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="e#1157#1176#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
