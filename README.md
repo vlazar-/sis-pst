@@ -1,19 +1,65 @@
-sis-pst
+PSTAnalyzerr
 =======
 SIS2014/2015@FOI
 
-ZADATAK:
-Napraviti software koji cita mail-ove (iz pst file-a), vadi potadke iz njih (from, to, cc, bcc, subject i content mail-a). Po podacima je moguce raditi pretragu punog teksta.
-UI dio omogucava pretragu za pojedinim mail-om (po sadrzaju, from, to, subject) i prikazuje mail-ove i poveznice graficki kao cvorove (objasnjenje: stavis "mail" na graf i onda vidis za njega kome je sve isao, ako odaberes period from-to i email adresu onda prikazes koliko mail-ova je islo prema pojedinim osobama u zadanom periodu). Za zadani period moguce je prikazati koliko mail-ova je za pojedinu osobu (from) isli prema kome, te veze izmedu osoba za pojedine mail-ove (to, cc i bcc veze). Smisao zadatka je graficki prikaz povezanosti osoba putem email poruka.
+TASK:
+Create a software for reading emails from PST file, analyzes it's data (from, to, cc, bcc, subject and content). 
+There is requirement for full-text search in emails. 
+UI allows search for each email by it's content, from, to, subject... Show emails for given period of time and count them for each person. Main goal is to graphicaly show connection between senders and recievers inside PST file.
+Project is still in the development phase.
+
+How to use applcation:
+--------------
+1. After application has started, choose PST file.
+2. Press "Launch" button
+3. After PST file is analyzed (can take up to a few minutes depending on file size), open web browser with address: http://localhost:4567/ 
 
 
-LINKOVI:
+Used techologies:
+--------------
+- Intellij IDEA 14.0.1 (IDE)
+- Maven 
+- Elasticsearch 1.4.1
+- Java Lib-Pst 0.8.1
+- Spark Java 2.1
+- Jest 0.1.3
+- Kibana 3.1.2
+- Other dependencies defined in pom.xml file
+
+Project Wiki (In Croatian): http://security.foi.hr/wiki/index.php/Analiza_PST_datoteka
+
+Usefull links:
 * ibm elasticsearch+java tutorial:
   http://www.ibm.com/developerworks/library/j-javadev2-24/
 * java-libpst:
   https://github.com/rjohnsondev/java-libpst
 * java 3rd mail api list:
   http://www.oracle.com/technetwork/java/javamail/third-party-136965.html
-* knjiga za elastic search:
+* Elasticsearch book:
   https://www.packtpub.com/big-data-and-business-intelligence/elasticsearch-cookbook
 * http://www.socallinuxexpo.org/scale12x-supporting/default/files/presentations/Scale12x%20-%20Intro%20to%20Elasticsearch%20%28Kluge%29.pdf
+
+
+Licencing
+----------------
+The MIT License (MIT)
+
+Copyright (c) 2015 Viktor Lazar, Martina Šestak, Goran Vodomin, Matej Vuković
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
