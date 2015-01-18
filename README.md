@@ -26,7 +26,7 @@ Used techologies:
 - Kibana 3.1.2
 - Other dependencies defined in pom.xml file
 
-**JavaDoc:** http://arka.foi.hr/~mvukovic2/PSTAnalyterr/JavaDocs/index.html
+**JavaDoc:** http://arka.foi.hr/~mvukovic2/PSTAnalyzerr/JavaDocs/index.html
 
 **Project Wiki (In Croatian):** http://security.foi.hr/wiki/index.php/Analiza_PST_datoteka
 
