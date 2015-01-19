@@ -1,4 +1,4 @@
-$(function () {
+/*$(function () {
 	/*$('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
 	$('.tree li.parent_li > span').on('click', function (e) {
 		var children = $(this).parent('li.parent_li').find(' > ul > li');
@@ -10,8 +10,8 @@ $(function () {
 			$(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
 		}
 		e.stopPropagation();
-	});*/
-});
+	});
+});*/
 
 /*template = "{{#single}} <div class=\"row\"> <div class=\"col-md-2 text-right\">" +
 		   "<p><b>Subject: </b></p> <p><b>From: </b></p> <p><b>To: </b></p> <p><b>"+
