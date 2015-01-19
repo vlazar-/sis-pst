@@ -8,6 +8,11 @@ There is requirement for full-text search in emails.
 UI allows search for each email by it's content, from, to, subject... Show emails for given period of time and count them for each person. Main goal is to graphically show connection between senders and receivers inside PST file.
 Project is still in the development phase.
 
+Important:
+--------------
+To run application, open source code (PSTAnalyzerr folder) in Intellij IDEA. Set Project SDK  to Java 1.8 and Project language level to 8 - Lambdas, type annotations etc.
+Self executable jar file will be provided ASAP. 
+
 How to use application:
 --------------
 1. After application has started, choose PST file.
