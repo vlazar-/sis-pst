@@ -3,19 +3,19 @@ PSTAnalyzerr
 SIS2014/2015@FOI
 
 TASK:
-Create a software for reading emails from PST file, analyzes it's data (from, to, cc, bcc, subject and content). 
+Create a software for reading emails from PST file, analyses it's data (from, to, cc, bcc, subject and content). 
 There is requirement for full-text search in emails. 
-UI allows search for each email by it's content, from, to, subject... Show emails for given period of time and count them for each person. Main goal is to graphicaly show connection between senders and recievers inside PST file.
+UI allows search for each email by it's content, from, to, subject... Show emails for given period of time and count them for each person. Main goal is to graphically show connection between senders and receivers inside PST file.
 Project is still in the development phase.
 
-How to use applcation:
+How to use application:
 --------------
 1. After application has started, choose PST file.
 2. Press "Launch" button
-3. After PST file is analyzed (can take up to a few minutes depending on file size), open web browser with address: http://localhost:4567/ 
+3. After PST file is analysed (can take up to a few minutes depending on file size), open web browser with address: http://localhost:4567/ 
 
 
-Used techologies:
+Used technologies:
 --------------
 - Intellij IDEA 14.0.1 (IDE)
 - Maven 
@@ -30,7 +30,7 @@ Used techologies:
 
 **Project Wiki (In Croatian):** http://security.foi.hr/wiki/index.php/Analiza_PST_datoteka
 
-Usefull links:
+Useful links:
 * ibm elasticsearch+java tutorial:
   http://www.ibm.com/developerworks/library/j-javadev2-24/
 * java-libpst:
@@ -42,7 +42,7 @@ Usefull links:
 * http://www.socallinuxexpo.org/scale12x-supporting/default/files/presentations/Scale12x%20-%20Intro%20to%20Elasticsearch%20%28Kluge%29.pdf
 
 
-Licencing
+Licensing
 ----------------
 The MIT License (MIT)
 
